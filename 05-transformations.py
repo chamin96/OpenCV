@@ -37,4 +37,10 @@ rotated = rotate(img, -90)
 cv.imshow("Rotated", rotated)
 
 
+# Resizing
+
+resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
+cv.imshow("Resized", resized)
+
+
 cv.waitKey(0)
