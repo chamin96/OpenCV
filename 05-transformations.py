@@ -22,8 +22,6 @@ cv.imshow("Translated", translated)
 # rotation
 def rotate(img, angle, rotPoint=None):
     (height, width) = img.shape[:2]
-    print(height, width)
-
     if rotPoint is None:
         rotPoint = (width//2, height//2)
     
@@ -42,5 +40,9 @@ cv.imshow("Rotated", rotated)
 resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
 cv.imshow("Resized", resized)
 
+
+# Flipping
+flipped = cv.flip(img, 0) # 0 --> flip vertical, 1 --> flip horiontal, -1 --> flip both
+cv.imshow("Flipped", flipped)
 
 cv.waitKey(0)
