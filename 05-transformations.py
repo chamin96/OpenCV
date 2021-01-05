@@ -45,4 +45,8 @@ cv.imshow("Resized", resized)
 flipped = cv.flip(img, 0) # 0 --> flip vertical, 1 --> flip horiontal, -1 --> flip both
 cv.imshow("Flipped", flipped)
 
+# Cropping
+cropped = img[200:300, 100:400]
+cv.imshow("Cropped", cropped)
+
 cv.waitKey(0)
